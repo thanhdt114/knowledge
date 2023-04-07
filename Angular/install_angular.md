@@ -9,4 +9,9 @@ Chọn bản phù hợp với máy 64bit or 32bit.
 
 - Cài đặt angular: 
 
-Mở Command Prompt -> run as administrator-> paste câu lệnh ```npm i @angular/cli@12.2.18 -g```
+Mở Command Prompt -> run as administrator-> paste câu lệnh ```npm i @angular/cli@12.2.18 -g```.
+![cmd install angular](/Angular/Images/cmd_install_angular.png "cmd install angular").
+
+2. Clone source project angular.
+3. Mở source lên = visual studio code.
+
