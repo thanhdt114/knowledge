@@ -25,7 +25,15 @@ Các kiểu biến phổ biến trong java
 - char : dùng để lưu 1 ký tự ví dụ ký tự a hoặc b
 - boolean : dùng để lưu giá trị đúng hay sai.
 
+Khi khai báo biến trong java phải gán giá trị ban đầu, nếu không gán giá trị mà chạy chương trình thì sẽ thông báo lỗi.
 Ví dụ
+- Code đúng
 ```java
 String name = “Tran Tuan Thanh”;
+System.out.println(name);
+```
+- Code sai
+```java
+String name;
+System.out.println(name);
 ```
