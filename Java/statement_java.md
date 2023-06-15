@@ -37,3 +37,28 @@ System.out.println(name);
 String name;
 System.out.println(name);
 ```
+
+Khi thực hiện nhân 2 số lớn có kiểu integer, kết quả trả về sẽ là 1 số integer có kiểu dữ liệu là kiểu dữ liệu có range lớn nhất trong 2 số nhân vào nhau.
+
+Ví dụ: các đoạn code sau cho kết quả giống nhau
+```java
+long a = 384847522;
+long b = 988347273;
+
+System.out.println(a * b); // Result: 380362998889507506
+```
+
+```java
+int a = 384847522;
+long b = 988347273;
+
+System.out.println(a * b); // Result: 380362998889507506
+```
+
+Code chạy kết quả sai
+```java
+int a = 384847522;
+int b = 988347273;
+
+System.out.println(a * b); // Result: -628954446
+```
