@@ -7,10 +7,10 @@ Trong java sử dụng câu lệnh sau để in thông tin ra màn hình: `Syste
 ```java
 public class HelloWorld
 {
-   public static void main(String[] args)
-   {
-	System.out.println("Hello, World!");
-   }
+    public static void main(String[] args)
+    {
+        System.out.println("Hello, World!");
+    }
 }
 ```
 
