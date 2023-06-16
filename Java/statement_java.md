@@ -110,26 +110,26 @@ Code mẫu
 import java.util.Scanner;
 
 public class Input {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-		String name = sc.nextLine();
-		String s = sc.next();
-		int a = sc.nextInt();
-		char c = sc.next().charAt(0);
+        String name = sc.nextLine();
+        String s = sc.next();
+        int a = sc.nextInt();
+        char c = sc.next().charAt(0);
 
-		// Enter value:
-		/*
-    		Tran Tuan Thanh
-    		x
-    		10
-			hello
-		*/
+        // Enter value:
+        /*
+            Tran Tuan Thanh
+            x
+            10
+            hello
+        */
 
-		System.out.println(name); // output: Tran Tuan Thanh
-		System.out.println(s); // output: x
-		System.out.println(a); // output: 10
-		System.out.println(c); // output: h
-	}
+        System.out.println(name); // output: Tran Tuan Thanh
+        System.out.println(s); // output: x
+        System.out.println(a); // output: 10
+        System.out.println(c); // output: h
+    }
 }   
 ```
