@@ -111,7 +111,7 @@ import java.util.Scanner;
 
 public class Input {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
 		String name = sc.nextLine();
 		String s = sc.next();
@@ -131,5 +131,5 @@ public class Input {
 		System.out.println(a); // output: 10
 		System.out.println(c); // output: h
 	}
-}
+}   
 ```
