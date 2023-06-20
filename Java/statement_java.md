@@ -133,3 +133,41 @@ public class Input {
     }
 }   
 ```
+
+## 5. Compare operators
+### Các toán tử so sánh trong java
+| Syntax    | Description               | Example   |
+| ---       | ---                       | ---       |
+| ==        | So sánh bằng              | `a == b`  |
+| !=        | So sánh khác              | `a != b`  |
+| >         | So sánh lớn hơn           | `a > b`   |
+| <         | So sánh bé hơn            | `a < b`   |
+| >=        | So sánh lơn hơn hoặc bằng | `a >= b`  |
+| <=        | So sánh bé hơn hoặc bằng  | `a <= b`  |
+#### Note: so sánh 2 String
+Dùng method `equals()` để so sánh 2 String
+```java
+String a = "Tran Tuan Thanh";
+String b = "Tran Tuan Thanh";
+
+if (a.equals(b)) {
+    System.out.println("a equal to b");
+} 
+// output: a equal to b
+```
+
+### Các toán tử logic trong java
+trong ví dụ ta giả sử
+- a = true
+- b = true
+- c = false
+- d = false
+
+| Syntax    | Description                                           | Example           |
+| ---       | ---                                                   | ---               |
+| &&        | AND: Trả về true khi 2 vế đều là true                 | `a && b` => true  |
+| \|\|      | OR: Trả về false khi 2 vế đều là false                | `c && d` => false |
+| !         | NOT: Lấy phủ định                                     | `!a` => false     |
+| ^         | XOR: trả về false khi 2 vế giống nhau và ngược lại    | `a ^ b` => false  |
+
+
