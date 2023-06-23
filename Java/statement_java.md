@@ -9,7 +9,11 @@ public class HelloWorld
 {
     public static void main(String[] args)
     {
-        System.out.println("Hello, World!");
+        System.out.print("Hello, World!");      
+        // print on 1 line (if you continue to print, you will continue to write on the current line)
+
+        System.out.println("Hello, World!");    
+        // print on 1 line (if println continues, print on the new line just below)
     }
 }
 ```
@@ -131,43 +135,58 @@ public class Input {
         System.out.println(a); // output: 10
         System.out.println(c); // output: h
     }
-}   
+}
 ```
 
 ## 5. Compare operators
+
 ### Các toán tử so sánh trong java
-| Syntax    | Description               | Example   |
-| ---       | ---                       | ---       |
-| ==        | So sánh bằng              | `a == b`  |
-| !=        | So sánh khác              | `a != b`  |
-| >         | So sánh lớn hơn           | `a > b`   |
-| <         | So sánh bé hơn            | `a < b`   |
-| >=        | So sánh lơn hơn hoặc bằng | `a >= b`  |
-| <=        | So sánh bé hơn hoặc bằng  | `a <= b`  |
+
+| Syntax | Description               | Example  |
+| ------ | ------------------------- | -------- |
+| ==     | So sánh bằng              | `a == b` |
+| !=     | So sánh khác              | `a != b` |
+| >      | So sánh lớn hơn           | `a > b`  |
+| <      | So sánh bé hơn            | `a < b`  |
+| >=     | So sánh lơn hơn hoặc bằng | `a >= b` |
+| <=     | So sánh bé hơn hoặc bằng  | `a <= b` |
+
 #### Note: so sánh 2 String
+
 Dùng method `equals()` để so sánh 2 String
+
 ```java
 String a = "Tran Tuan Thanh";
 String b = "Tran Tuan Thanh";
 
 if (a.equals(b)) {
     System.out.println("a equal to b");
-} 
+}
 // output: a equal to b
 ```
 
 ### Các toán tử logic trong java
+
 trong ví dụ ta giả sử
-- a = true
-- b = true
-- c = false
-- d = false
 
-| Syntax    | Description                                           | Example           |
-| ---       | ---                                                   | ---               |
-| &&        | AND: Trả về true khi 2 vế đều là true                 | `a && b` => true  |
-| \|\|      | OR: Trả về false khi 2 vế đều là false                | `c && d` => false |
-| !         | NOT: Lấy phủ định                                     | `!a` => false     |
-| ^         | XOR: trả về false khi 2 vế giống nhau và ngược lại    | `a ^ b` => false  |
+-   a = true
+-   b = true
+-   c = false
+-   d = false
 
+| Syntax | Description                                        | Example           |
+| ------ | -------------------------------------------------- | ----------------- |
+| &&     | AND: Trả về true khi 2 vế đều là true              | `a && b` => true  |
+| \|\|   | OR: Trả về false khi 2 vế đều là false             | `c && d` => false |
+| !      | NOT: Lấy phủ định                                  | `!a` => false     |
+| ^      | XOR: trả về false khi 2 vế giống nhau và ngược lại | `a ^ b` => false  |
 
+## 6. Loop statements
+### For
+Sử dụng vòng lặp for để tạo vòng lặp chạy từ i = 0 đến i = 10
+
+```java
+for (int i = 0; i <= 10; i++) {
+    System.out.print(i + " ");
+}
+```
