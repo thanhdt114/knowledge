@@ -177,7 +177,7 @@ trong ví dụ ta giả sử
 | Syntax | Description                                        | Example           |
 | ------ | -------------------------------------------------- | ----------------- |
 | &&     | AND: Trả về true khi 2 vế đều là true              | `a && b` => true  |
-| \|\|   | OR: Trả về false khi 2 vế đều là false             | `c && d` => false |
+| \|\|   | OR: Trả về false khi 2 vế đều là false             | `c \|\| d` => false |
 | !      | NOT: Lấy phủ định                                  | `!a` => false     |
 | ^      | XOR: trả về false khi 2 vế giống nhau và ngược lại | `a ^ b` => false  |
 
@@ -190,3 +190,29 @@ for (int i = 0; i <= 10; i++) {
     System.out.print(i + " ");
 }
 ```
+
+### While
+Sử dụng vòng lặp while để tạo vòng lạp chạy cho tới khi điều kiện của vòng lặp bị sai
+```java
+int n = 0;
+while (n <= 10) {
+    System.out.print(n + " ");
+    n++;
+}
+```
+
+### Do-While
+Sử dụng vòng lặp do-while để tạo vòng lạp chạy cho tới khi điều kiện của vòng lặp bị sai\
+Khác nhau giữa do-while và while là do-while sẽ thực hiện đoan code bên trong do trước rồi mới đi kiểm tra điều kiện và cứ thế lặp lại
+```java
+int i = 1;
+do {
+    System.out.print(i + " ");
+    i++;
+} while (i <= 5);
+```
+
+### Note
+Sử dụng break và continue
+- `break;` thoát vòng lặp hiện tại
+- `continue;` bỏ qua đoạn code bên dưới continue và đi đến lần lặp tiếp theo
