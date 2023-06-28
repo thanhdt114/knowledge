@@ -216,3 +216,15 @@ do {
 Sử dụng break và continue
 - `break;` thoát vòng lặp hiện tại
 - `continue;` bỏ qua đoạn code bên dưới continue và đi đến lần lặp tiếp theo
+
+## 7. Array
+### Mảng trong java
+Bắt buộc phải khai báo độ lớn (size) của mảng
+```java
+int[] array = new int[10];
+
+for (int i = 0; i < 10; i++) {
+    array[i] = sc.nextInt();
+}
+```
+### Note: Nên dùng ArrayList thay cho Array
