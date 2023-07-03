@@ -36,16 +36,49 @@ Trong java hỗ trợ comment 1 dòng hoặc comment nhiều dòng bằng 2 câu
 -   boolean : dùng để lưu giá trị đúng hay sai.
 
 ### Ép kiểu trong java
+Giả sử:
+- a: Integer
+- b: Double
+- s: String
 
-Sử dụng câu lệnh sau: `[data type1] variable1 = ([data type1])([variable2])`
+Thực hiện ép kiểu cho 3 kiểu dữ liệu phổ biến trên:
+
+- Number to Number: `int a = (int)(b)`
+- Number to String: `String s = String.valueOf(a)`
+- String to Number: `int a = Integer.parseInt(a)`
 
 ```java
-char c = 'x';
-int a = (int)c;
-int b = (int)(c + 1);
+System.out.println("Convert Data Type");
 
-System.out.println(a); // output: 120
-System.out.println(b); // output: 121
+int a = 10;
+double b = 20;
+String s = "30";
+
+System.out.println("a = " + a);
+System.out.println("b = " + b);
+System.out.println("s = " + s);
+
+b = 99;
+a = (int)(b);
+System.out.println("Number to Number: a = " + a);
+
+a = 88;
+s = String.valueOf(a);
+System.out.println("Number to String: s = " + s);
+
+s = "77";
+a = Integer.parseInt(s);
+System.out.println("String to number: a = " + a);
+```
+Kết quả: 
+```
+Convert Data Type
+a = 10
+b = 20.0
+s = 30
+Number to Number: a = 99
+Number to String: s = 88
+String to number: a = 77
 ```
 
 ### Note 3
@@ -183,7 +216,7 @@ trong ví dụ ta giả sử
 
 ## 6. Loop statements
 ### For
-Sử dụng vòng lặp for để tạo vòng lặp chạy từ i = 0 đến i = 10
+Sử dụng vòng lặp For để tạo vòng lặp chạy từ i = 0 đến i = 10
 
 ```java
 for (int i = 0; i <= 10; i++) {
@@ -191,8 +224,30 @@ for (int i = 0; i <= 10; i++) {
 }
 ```
 
+### ForEach
+Sử dụng vòng lặp ForEach để tạo vòng lặp chạy qua toàn bộ phần tử mà không cần biết kích thước
+
+```java
+System.out.println("ForEach Demo");
+
+List<Integer> list = new ArrayList<Integer>();
+
+list.add(1);
+list.add(2);
+list.add(3);
+
+for (Integer item : list) {
+    System.out.print(item + " | ");
+}
+```
+Kết quả
+```
+ForEach Demo
+1 | 2 | 3 | 
+```
+
 ### While
-Sử dụng vòng lặp while để tạo vòng lạp chạy cho tới khi điều kiện của vòng lặp bị sai
+Sử dụng vòng lặp While để tạo vòng lạp chạy cho tới khi điều kiện của vòng lặp bị sai
 ```java
 int n = 0;
 while (n <= 10) {
@@ -202,8 +257,8 @@ while (n <= 10) {
 ```
 
 ### Do-While
-Sử dụng vòng lặp do-while để tạo vòng lạp chạy cho tới khi điều kiện của vòng lặp bị sai\
-Khác nhau giữa do-while và while là do-while sẽ thực hiện đoan code bên trong do trước rồi mới đi kiểm tra điều kiện và cứ thế lặp lại
+Sử dụng vòng lặp Do-While để tạo vòng lạp chạy cho tới khi điều kiện của vòng lặp bị sai\
+Khác nhau giữa Do-While và while là Do-While sẽ thực hiện đoan code bên trong do trước rồi mới đi kiểm tra điều kiện và cứ thế lặp lại
 ```java
 int i = 1;
 do {
