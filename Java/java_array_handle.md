@@ -28,7 +28,7 @@ public class test {
 	public static void main(String[] args) {
 		System.out.println("List demo");
 		
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         
         list.add("Tien");
         list.add("Dam");
@@ -71,6 +71,33 @@ Index Of: 1
 Size: 3
 Clear: []
 ```
+## Note
+### List.add(Object)
+- Khi dùng phương thức `add` để thêm 1 `object` vào `List` có nghĩa là bạn đang thực hiện tham chiếu đến object đó.
+- Vì vậy khi bạn thay đổi giá trị của `object` đó thì giá trị `tương ứng` trong `List` cũng thay đổi theo.
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class test3 {
+	public static void main(String[] args) {
+		List<List<Integer>> list = new ArrayList<>();
+		List<Integer> child = new ArrayList<>();
+		
+		child.add(10);
+		list.add(child);
+		System.out.println("Before value: " + list.get(0).get(0));
+		
+		child.set(0, 20);
+		System.out.println("After value: " + list.get(0).get(0));
+	}	
+}
+```
+Kết quả
+```
+Before value: 10
+After value: 20
+```
 
 # 2. ArrayList
 ## Khái nhiệm
@@ -107,7 +134,7 @@ import java.util.List;
 
 public class test {
 	public static void main(String[] args) {
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         
         list.add("Thanh");
         list.add("Dam");
@@ -181,9 +208,94 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-List<Integer> list = new ArrayList<Integer>();
+List<Integer> list = new ArrayList<>();
 list.stream().toList();
 
 Stream<String> stream = Stream.empty();
 list = stream.toList();
+```
+
+### Comparator in max/min method, sorted method
+- Khi dùng hàm max/min hoặc hàm sorted chúng ta cần khai báo so sánh bên trong
+- Sử dụng thư viện: `java.util.Comparator` 
+
+#### So sánh 1 element 
+| Data type | Compare | Example |
+| --- | --- | --- |
+| String, int, double, ... | `Comparator.naturalOrder()` | `list.stream().max(Comparator.naturalOrder())` |
+| Object | `Comparator.comparing(Object::getData)` | `list.stream().max(Comparator.comparing(Person::getName))` |
+
+#### So sánh 2 hoặc nhiều elements 
+- Kiểu object thường là class có nhiều elements
+- thenComparing có thể được sử dụng nhiều lần để so sánh theo nhiều cấp độ
+
+| Data type | Compare | Example |
+| --- | --- | --- |
+| Object | `Comparator.comparing(Object::getData1).thenComparing(Person::getData2)` | `list.stream().max(Comparator.comparing(Person::getName).thenComparing(Person::getAge))` |
+
+#### Code example
+```java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Comparator;
+
+public class test3 {
+	public static void main(String[] args) {
+		List<Integer> list = new ArrayList<>();
+		
+		list.add(1);
+		list.add(3);
+		list.add(2);
+		
+		System.out.println("max data = " + list.stream().max(Comparator.naturalOrder()).get());
+		
+		class Person {
+			private String name;
+			private int age;
+			
+			public Person(String name, int age) {
+				this.name = name;
+				this.age = age;
+			}
+			
+			public String getName() {
+				return this.name;
+			}
+			
+			public int getAge() {
+				return this.age;
+			}
+		}
+		
+		List<Person> people = new ArrayList<>();
+		people.add(new Person("Thanh", 22));
+		people.add(new Person("Dam", 21));
+		people.add(new Person("Dam", 20));
+		
+		System.out.println("max object = " + people.stream().max(Comparator.comparing(Person::getName)).get().getName());
+		
+		System.out.println("Sort 1 element");
+		people.stream().sorted(Comparator.comparing(Person::getName)).forEach(item -> {
+			System.out.println("name: " + item.getName() + ", age: " + item.getAge());
+		});
+		
+		System.out.println("Sort 2 elements");
+		people.stream().sorted(Comparator.comparing(Person::getName).thenComparing(Person::getAge)).forEach(item -> {
+			System.out.println("name: " + item.getName() + ", age: " + item.getAge());
+		});
+	}	
+}
+```
+Kết quả
+```
+max data = 3
+max object = Thanh
+Sort 1 element
+name: Dam, age: 21
+name: Dam, age: 20
+name: Thanh, age: 22
+Sort 2 elements
+name: Dam, age: 20
+name: Dam, age: 21
+name: Thanh, age: 22
 ```
