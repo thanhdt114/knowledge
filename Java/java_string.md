@@ -87,3 +87,34 @@ toUpperCase:   TRAN TUAN THANH
 trim: Tran Tuan Thanh
 valueOf: r
 ```
+
+## 2. Methods
+Phương thức trong java là 1 code block nằm bên trong class, có thể gắn liền với class hoặc không (static/non-static)
+- static: từ class có thể sử dụng được method ngay lập tức
+- non-static: phải khởi tạo class chứa method và từ class này mới có thể sử dụng method
+
+### Code Example
+```java
+public class test2 {
+	public static void main(String[] args) {
+		System.out.println("Method Demo");
+		staticMethod();
+		test2 myClass = new test2();
+		myClass.nonStaticMethod();
+	}
+	
+	public static void staticMethod() {
+		System.out.println("Static Method");
+	}
+	
+	public void nonStaticMethod() {
+		System.out.println("Non Static Method");
+	}
+}
+```
+Kết quả 
+```
+Method Demo
+Static Method
+Non Static Method
+```
