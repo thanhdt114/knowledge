@@ -138,7 +138,7 @@ Sử dụng Scanner:
 
 -   String (không bao gồm khoảng trắng): `String s = sc.next();`
 -   Không phải String: `int a = sc.nextInt();`
--   String (bao gồm khoảng trắng): `String s = sc.nextLine();`
+-   String (bao gồm khoảng trắng): `String s = sc.nextLine();` (trước khi dùng câu lệnh này phải gọi `sc.nextLine()` để đọc hết ký tự dư thừa còn sót lại trước đó)
 -   char (lấy ký tự đầu tiên trong chữ đầu tiên): `char c = sc.next().charAt(0);`
 
 Code mẫu
@@ -150,6 +150,7 @@ public class Input {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        sc.nextLine();
         String name = sc.nextLine();
         String s = sc.next();
         int a = sc.nextInt();
