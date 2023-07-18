@@ -2,27 +2,16 @@
 
 ## 1. JDK
 - File name: jdk-17_windows-x64_bin.exe
-- Version: 17.0.7
-
+- Version: 17
+- Link: https://www.oracle.com/java/technologies/downloads/#jdk17-windows
+- Link dự phòng (TeraBox): https://terabox.com/s/1q0vNZwmJN2MkUAXM1gOyxw
 ## 2. Eclipse
 - File name: eclipse-inst-jre-win64.exe
 - Version: 4.28.0.v20230605-0440
 - Build id: I20230605-0440
+- Link: https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2023-06/R/eclipse-inst-jre-win64.exe
+- Link dự phòng (TeraBox): https://terabox.com/s/1wQ4bzIkApDS1GzNKLDcZVw
 
-## 3. Spring Tools 4 (Eclipse Extension)
+## 3. Spring Tools 4 (Eclipse Marketplace)
 - File name: Spring Tools (aka Spring Tool Suite 4)
 - Version: 4.19.0.RELEASE
-
-## 4. Spring Tools 3 Add on For Spring Tool 4 (Eclipse Extension)
-- File name: Spring Tools 3 Add on For Spring Tool 4
-- Version: 4.3.9.22.RELEASE
-
-## 5. Eclipse Web Developer Tools (Eclipse Extension)
-- File name: Eclipse Web Developer Tools
-- Version: 3.30
-
-
-## 6. VMware tc Server Integration for Eclipse (Eclipse Extension)
-### Note: Install if run server failed (not responding)
-- File name: Spring Tools 3 Add on For Spring Tool 4
-- Version: 4.1.1.RELEASE
