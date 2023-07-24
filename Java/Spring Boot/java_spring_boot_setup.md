@@ -1,4 +1,4 @@
-# JAVA SPRING BOOT CONFIG
+# JAVA SPRING BOOT SETUP
 
 ## 1. JDK
 - File name: jdk-17_windows-x64_bin.exe
