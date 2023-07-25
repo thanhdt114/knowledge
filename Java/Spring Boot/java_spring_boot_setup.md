@@ -15,3 +15,11 @@
 ## 3. Spring Tools 4 (Eclipse Marketplace)
 - File name: Spring Tools (aka Spring Tool Suite 4)
 - Version: 4.19.0.RELEASE
+
+## 4. Setup Lombok
+- Go to Help menu -> Install new software
+- Click Add
+- Name: Lombok
+- Location: https://projectlombok.org/p2
+- Click add -> Next... (Choose: I agree, Select All, Trust selected if available)
+- Click reset
