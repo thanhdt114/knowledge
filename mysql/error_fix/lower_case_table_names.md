@@ -1,4 +1,4 @@
-# Set lower_case_table_names = 1
+# Set lower_case_table_names = 1 (linux)
 
 It is mandatory to uninstall mysql and assign values during mysql installation\
 **NOTE:**
