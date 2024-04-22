@@ -48,7 +48,7 @@ sudo mkdir /var/lib/mysql
 sudo chown mysql:mysql /var/lib/mysql
 sudo chmod 700 /var/lib/mysql
 ```
-5. Add lower_case_table_names = 1 to the [mysqld] section in /etc/mysql/mysql.conf.d/mysqld.cnf
+5. Add `lower_case_table_names = 1` to the [mysqld] section in /etc/mysql/mysql.conf.d/mysqld.cnf
 ```bash
 sudo gedit /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
