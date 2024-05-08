@@ -20,3 +20,7 @@ server {
     # Add more location blocks for additional services as needed
 }
 ```
+3. Restart nginx
+```bash
+service nginx restart
+```
