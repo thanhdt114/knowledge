@@ -22,5 +22,5 @@ server {
 ```
 3. Restart nginx
 ```bash
-service nginx restart
+sudo service nginx restart
 ```
