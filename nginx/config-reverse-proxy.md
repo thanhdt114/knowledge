@@ -8,17 +8,23 @@ sudo gedit /etc/nginx/sites-available/default
 2. Add content and click save button
 ```
 server {
-    listen 80;
-
-    server_name 0.0.0.0;
-
-    location /test/ {
-        proxy_pass http://0.0.0.0:5500/;
-    }
-
-
-    # Add more location blocks for additional services as needed
+	listen 80;
+	server_name 0.0.0.0;
+	location / {
+	    add_header Content-Type text/plain;
+	    return 200 'Welcome';
+	}
 }
+
+server {
+	listen 80;
+	server_name domain1.local;
+	location / {
+	    add_header Content-Type text/plain;
+	    return 200 'Domain1';
+	}
+}
+
 ```
 3. Restart nginx
 ```bash
