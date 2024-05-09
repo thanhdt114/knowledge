@@ -20,8 +20,7 @@ server {
 	listen 80;
 	server_name domain1.local;
 	location / {
-	    add_header Content-Type text/plain;
-	    return 200 'Domain1';
+		proxy_pass http://IP:8080;
 	}
 }
 
