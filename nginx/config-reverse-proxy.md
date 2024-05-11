@@ -1,5 +1,8 @@
 # Config Reverse Proxy
 
+**NOTE**
+Should create each file for 1 domain for easy management
+
 1. Create config file
 ```bash
 sudo gedit /etc/nginx/conf.d/domain.conf
