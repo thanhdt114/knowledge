@@ -1,8 +1,8 @@
 # Config Reverse Proxy
 
-1. Open default config file
+1. Create config file
 ```bash
-sudo gedit /etc/nginx/sites-available/default
+sudo gedit /etc/nginx/conf.d/domain.conf
 ```
 
 2. Add content and click save button
@@ -18,7 +18,7 @@ server {
 
 server {
 	listen 80;
-	server_name domain1.local;
+	server_name domain.local;
 	location / {
 		proxy_pass http://IP:8080;
 	}
