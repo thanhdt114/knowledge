@@ -1,6 +1,5 @@
 # Config SSL By Let’s Encrypt
 
-## Install certbot follow
 1. Install Certbot
 - Run this command on the command line on the machine to install Certbot.
 ```bash
@@ -32,3 +31,7 @@ server {
     include /etc/letsencrypt/options-ssl-nginx.conf;
 }
 ```
+
+## References
+1. [Certbot instructions](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal&tab=standard)
+2. [Hướng dẫn tạo SSL/TLS](https://quoc9x.com/2023/04/20/huong-dan-tao-ssl-tls-mien-phi-voi-openssl-va-lets-encrypt/)
